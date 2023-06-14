@@ -59,17 +59,14 @@ public class ObserverPatternDemo {
 
     public static void main(String[] args) {
 
-        // create users
         User user1 = new User("Чекушин Никита");
         User user2 = new User("Марков Максим");
 
-        // create groups
         Group group1 = new Group("Терновка");
         Group group2 = new Group("Пенза Live");
         Group group3 = new Group("Спутник Live");
         Group group4 = new Group("Парк Белинского");
 
-        // register observers
         user1.subscribe("Терновка");
         user1.subscribe("Пенза Live");
         user1.subscribe("Спутник Live");
@@ -87,7 +84,6 @@ public class ObserverPatternDemo {
         group3.registerObserver(user2);
         group4.registerObserver(user2);
 
-        // notify observers
         group1.post("Реконструкция моста почти завершена!!!");
         group3.post("Салют в честь города!!!");
         group2.post("Городу исполняется 360 лет!!!");
